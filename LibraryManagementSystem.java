@@ -12,6 +12,7 @@ public class LibraryManagementSystem {
         System.out.println("Books in the library:");
         library.inOrderTraversal(library.getRoot());
 
+
         // Search for a book
         int searchISBN = 23456;
         Node book = library.search(searchISBN);
@@ -20,5 +21,9 @@ public class LibraryManagementSystem {
         } else {
             System.out.println("\nBook with ISBN " + searchISBN + " not found.");
         }
+
+        //delete a book
+        library.deleteNode(12345);
+        library.inOrderTraversal(library.getRoot());
     }
 }

@@ -8,22 +8,19 @@ public class LibraryManagementSystem {
         library.insert(34567, "Clean Code", "Robert Martin");
         library.insert(45678, "Effective Java", "Joshua Bloch");
 
+        // Create LibraryManager and pass the RedBlackTree instance
+        LibraryManager manager = new LibraryManager(library);
+        
         // Display all books
-        System.out.println("Books in the library:");
-        library.inOrderTraversal(library.getRoot());
+        manager.displayAllBooks();
 
+        // Now you can perform operations
+        manager.addUser(1, "Alice");
+        manager.borrowBook(1, 12345);
+        manager.displayUserBooks(1);
 
-        // Search for a book
-        int searchISBN = 23456;
-        Node book = library.search(searchISBN);
-        if (book != null) {
-            System.out.println("\nBook found: ISBN: " + book.isbn + ", Title: " + book.title + ", Author: " + book.author);
-        } else {
-            System.out.println("\nBook with ISBN " + searchISBN + " not found.");
-        }
-
-        //delete a book
-        library.deleteNode(12345);
-        library.inOrderTraversal(library.getRoot());
+        // Returning a book
+        manager.returnBook(1, 12345);
+        manager.displayUserBooks(1);
     }
 }

@@ -1,14 +1,15 @@
 class Node {
-    int isbn; // ISBN number (used for sorting)
-    String title; 
+    int isbn;
+    String title;
     String author;
-    boolean isRed;
+    boolean isRed; // True if borrowed (Red), False if available (Black)
     Node left, right, parent;
 
     public Node(int isbn, String title, String author) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
-        this.isRed = true; // New nodes are red initially
+        this.isRed = false; // Initially the book is available
+        this.left = this.right = this.parent = null;
     }
 }

@@ -5,12 +5,10 @@ Add/remove books.
 Search for books by title/ISBN/author.
 Display all books in sorted order.
 
-
-Explanation
-Book Class: Represents the book entity with attributes ISBN, title, and author.
-
-Node Class: Represents a node in the Red-Black Tree, with attributes data, left, right, parent, and isRed.
-
-RedBlackTree Class: Manages the Red-Black Tree, including insertions and searches.
-
-Library Class: Uses the Red-Black Tree to manage the collection of books, allowing books to be added and searched.
+##MEMBERS: 
+1. Rony Maruga - SCT212-0590/2022 
+2. David Ngugi - SCT212-0725/2022
+3. Kennedy Wanakacha - SCT212-0074/2021 
+4. Erick Kimani - SCT212-0130/2022 
+5. Fredrick Mbai - SCT212-0146/2022 
+6. Marc Tiro - SCT212-0200/2022
